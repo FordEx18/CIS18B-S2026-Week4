@@ -12,8 +12,9 @@ public class AlertServiceTest {
         Alert alert = new Alert(1, "Unauthorized login attempt", AlertLevel.CRITICAL);
 
         // TODO: Process the alert.
+        service.processAlert(alert);
         // TODO: Assert that one alert was stored.
-        assertEquals(1, 0);
+        assertEquals(1, service.getAlertCount());
     }
 
     @Test
@@ -22,6 +23,6 @@ public class AlertServiceTest {
         Alert alert = new Alert(2, "Disk failure", AlertLevel.CRITICAL);
 
         // TODO: Replace null with a lambda that calls processAlert(alert).
-        assertThrows(AlertStorageException.class, null);
+        assertThrows(AlertStorageException.class, () -> service.processAlert(alert));
     }
 }
