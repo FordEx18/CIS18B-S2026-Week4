@@ -6,6 +6,7 @@ public class AlwaysFailRepository implements AlertRepository {
     @Override
     public void save(Alert alert) throws AlertStorageException {
         // TODO: Always throw AlertStorageException.
+        throw new AlertStorageException("Simulated storage failure");
     }
 
     @Override

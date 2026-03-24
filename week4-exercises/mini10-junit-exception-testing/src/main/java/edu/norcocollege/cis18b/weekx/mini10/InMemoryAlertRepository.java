@@ -9,6 +9,7 @@ public class InMemoryAlertRepository implements AlertRepository {
     @Override
     public void save(Alert alert) throws AlertStorageException {
         // TODO: Save the alert to the list.
+        alerts.add(alert);
     }
 
     @Override
