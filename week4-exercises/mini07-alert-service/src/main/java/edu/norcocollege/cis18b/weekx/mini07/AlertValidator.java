@@ -6,10 +6,10 @@ public class AlertValidator {
         if(alert == null) {
             throw new InvalidAlertException("Alert cannot be null.");
         }
-        if(alert.getMessage() == null || alert.getMessage().isEmpty()) {
+        if(alert.message() == null || alert.message().isEmpty()) {
             throw new InvalidAlertException("Alert message cannot be empty.");
         }
-        if(alert.getLevel() == null) {
+        if(alert.level() == null) {
             throw new InvalidAlertException("Alert level must be specified.");
         }
     }
