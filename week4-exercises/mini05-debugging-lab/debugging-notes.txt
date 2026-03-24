@@ -1,1 +1,6 @@
-TODO: Replace this text with your debugging notes.
+Bug: The Loop was causing an ArrayIndexOutOfBoundsException when i reached 3.
+How I found it: I set a breakpoint within the loop and entered debug mode where I watched variable i. 
+The exception triggered when i went beyond the last valid index.
+Fix: Change the loop condition from i<=alerts.length to i<alerts.length
+This ensures the loop iterates over valid array options
+
